@@ -1,11 +1,13 @@
 import React from "react";
 import CarritoAnto from "./CarritoAnto";
+import { Link } from "react-router-dom"
 
-const Navbar = () => {
+
+export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Logo Anto</a>
+          <a className="navbar-brand" href="/">Logo Anto</a>
           <div>
                    
                     <a href="https://www.facebook.com/antonella.delpiano.758/"><img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/facebook_black_logo_icon_147136.png" alt="Facebook" width={45}/></a>
@@ -15,11 +17,11 @@ const Navbar = () => {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">Inicio</a>
-              <a className="nav-link" href="#">Trayectoria</a>
-              <a className="nav-link" href="#">Tienda</a>
+          <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div className="navbar-nav ">
+            <Link to="/" className="nav-link active" aria-current="page">Inicio</Link>
+            <Link to="/category/Coleccion1" className="nav-link">Producto1</Link>
+            <Link to="/category/Coleccion2" className="nav-link">Producto2</Link>
             </div>
           </div>
          
@@ -35,4 +37,3 @@ const Navbar = () => {
     );
 } 
 
-export default Navbar;
